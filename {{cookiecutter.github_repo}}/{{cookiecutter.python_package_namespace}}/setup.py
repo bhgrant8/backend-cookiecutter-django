@@ -17,7 +17,7 @@ except ImportError:
 } %}
 
 def get_version(*file_paths):
-    """Retrieves the version from {{ cookiecutter.python_package_namespace }}/{{ cookiecutter.python_subpackage }}/__init__.py"""
+    """Retrieves the version from {{ cookiecutter.python_package_namespace }}/VERSION"""
     filename = os.path.join(os.path.dirname(__file__), *file_paths)
     version_file = open(filename).read()
     version_match = re.search(r"^__version__ = ['\"]([^'\"]*)['\"]",
@@ -26,7 +26,7 @@ def get_version(*file_paths):
         return version_match.group(1)
     raise RuntimeError('Unable to find version string.')
 
-version = get_version("{{ cookiecutter.python_package_namespace }}/{{ cookiecutter.python_subpackage }}", "__init__.py")
+version = get_version("VERSION")
 
 if sys.argv[-1] == 'publish':
     try:
@@ -64,6 +64,12 @@ setup(
 {%- endif %}
     zip_safe=False,
     keywords='{{ cookiecutter.github_repo }}',
+    install_requires=[
+        'djangorestframework',
+        {%- if cookiecutter.gis_project %}
+        'djangorestframework-gis'
+        {%- endif %}
+    ],
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Framework :: Django :: 2.0',
