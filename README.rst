@@ -65,7 +65,7 @@ You will be asked the following information when creating a project:
      "year": "2019",
      "github_repo": "2019-transportation-systems-backend",
      "python_package_namespace": "hackoregon_transportation_systems",
-     "python_submodule": "toad",
+     "python_subpackage": "toad",
      "project_short_description": "Your project description goes in here",
      "version": "0.1.0",
      "open_source_license": ["MIT", "BSD", "ISCL", "Apache Software License 2.0", "Not open source"] (Choose MIT for hackoregon projects)
@@ -80,8 +80,8 @@ Explanation
 -  github_username: Your github username
 -  hack_oregon_team: Canonical name for the Hack Oregon Project Team, ie Transportation Systems or Sandbox
 -  github_repo: naming of repo within the hackoregon organization, ie: 2019-transportation-systems-backend
--  python_package_namespace: Namespace to use for project submodules in public package authority, ex: hackoregon_transportation_systems
--  python_submodule: Name of the Django Rest Framework submodule for project code. Cookiecutter will generate a single submodule, though project may have multiple submodules
+-  python_package_namespace: Namespace to use for project subpackages in public package authority, ex: hackoregon_transportation_systems
+-  python_subpackage: Name of the Django Rest Framework subpackage for project code. Cookiecutter will generate a single subpackage, though project may have multiple subpackages
 -  project_short_description: A brief description of the project
 -  version: initial version of the app, should be 0.1.0 if new project
 -  open_source_license: Type of License to apply
