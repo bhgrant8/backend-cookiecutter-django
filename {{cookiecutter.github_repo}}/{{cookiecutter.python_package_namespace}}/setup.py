@@ -53,10 +53,11 @@ setup(
     version=version,
     description="""{{ cookiecutter.project_short_description }}""",
     long_description=readme + '\n\n' + history,
+    long_description_content_type='text/x-rst',
     author='{{ cookiecutter.full_name }}',
     author_email='{{ cookiecutter.email }}',
     url='https://github.com/hackoregon/{{ cookiecutter.github_repo }}',
-    packages=setuptools.find_namespace_packages(include=['namespace.*'])
+    packages=setuptools.find_namespace_packages(include=['namespace.*']),
     include_package_data=True,
 {%- if cookiecutter.open_source_license in license_classifiers %}
     license="{{ cookiecutter.open_source_license }}",
