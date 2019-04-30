@@ -44,30 +44,3 @@ Add {{ cookiecutter.python_package_namespace }}'s URL patterns:
         url(r'^', include({{ cookiecutter.python_subpackage }}_urls)),
         ...
     ]
-
-Features
---------
-
-* TODO
-
-Running Tests
--------------
-
-Does the code actually work?
-
-::
-
-    source <YOURVIRTUALENV>/bin/activate
-    (myenv) $ pip install tox
-    (myenv) $ tox
-
-Credits
--------
-
-Tools used in rendering this package:
-
-*  Cookiecutter_
-*  `cookiecutter-djangopackage`_
-
-.. _Cookiecutter: https://github.com/audreyr/cookiecutter
-.. _`cookiecutter-djangopackage`: https://github.com/pydanny/cookiecutter-djangopackage
